@@ -19,7 +19,7 @@
 
     - name: Clone Git repository
       git:
-        repo: https://github.com/your/flask-app-repo.git
+        repo: https://github.com/MuhammadSalah99/dockerize-flaskapp-through-bash.git
         dest: /opt/app
       tags:
         - git
