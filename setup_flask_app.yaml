@@ -29,5 +29,5 @@
         requirements: /opt/app/requirements.txt
 
     - name: Run Flask app
-      command: /opt/app/venv/bin/python /opt/app/app.py
+      command: python3  /opt/app/app.py
 
