@@ -3,6 +3,9 @@
   hosts: "localhost" # Replace with the target server's hostname or IP address
   become: yes
 
+  environment:
+    ANSIBLE_HOST_KEY_CHECKING: "False"
+
   tasks:
     - name: Update package cache
       apt:
@@ -30,6 +33,4 @@
 
     - name: Run Flask app
       command: python3  /opt/app/app.py
-      environment:
-        ANSIBLE_SSH_ARGS: "-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
