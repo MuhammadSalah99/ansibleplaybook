@@ -1,6 +1,6 @@
 ---
 - name: Set Up Flask App Server
-  hosts: your_server  # Replace with the target server's hostname or IP address
+  hosts: "localhost" # Replace with the target server's hostname or IP address
   become: yes
 
   tasks:
