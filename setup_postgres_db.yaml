@@ -4,6 +4,10 @@
   become: yes
 
   tasks:
+    - name: Install psycopg2 Python library
+      apt:
+        name: python3-psycopg2  # Adjust package name if using a different package manager
+        state: present
     - name: Install PostgreSQL
       apt:
         name: postgresql
