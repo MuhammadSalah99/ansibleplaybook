@@ -1,6 +1,6 @@
 ---
 - name: Set Up Flask App Server
-  hosts: "localhost" # Replace with the target server's hostname or IP address
+  hosts: "localhost" 
   become: yes
 
   environment:

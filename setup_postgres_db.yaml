@@ -1,0 +1,24 @@
+---
+- name: Install and Configure PostgreSQL
+  hosts: "localhost"
+  become: yes
+
+  tasks:
+    - name: Install PostgreSQL
+      apt:
+        name: postgresql
+        state: present
+
+    - name: Create PostgreSQL User
+      postgresql_user:
+        db: postgres
+        name: admin
+        password: admin
+        state: present
+
+    - name: Create PostgreSQL Database
+      postgresql_db:
+        name: db
+        owner: admin
+        state: present
+
