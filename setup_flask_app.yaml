@@ -28,7 +28,7 @@
         - git
 
     - name: Install app dependencies
-      pip:
+      pip3:
         requirements: /opt/app/requirements.txt
 
     - name: Run Flask app
