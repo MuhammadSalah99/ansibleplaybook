@@ -15,14 +15,11 @@
 
     - name: Create PostgreSQL User
       postgresql_user:
-        db: postgres
-        name: admin
+        db: db
+        user: admin
         password: admin
+        priv: ALL
         state: present
-
-    - name: Create PostgreSQL Database
-      postgresql_db:
-        name: db
-        owner: admin
-        state: present
-
+        login_host: localhost
+        login_user: postgres
+   
